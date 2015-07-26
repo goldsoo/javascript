@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="./tooltip.js"></script>
+	<style type="text/css">
+		* {
+			 margin: 0;
+			 padding: 0;
+		}
+		li {
+			 list-style: none;
+		}
+		div.right {
+			width:200px;
+			text-align: right;
+		}
+
+		div.center {
+			text-align: center;
+		}
+
+		a {
+			display:inline-block;
+			font-size:12px;
+			color:#999;   
+			text-decoration: none;
+			position:relative;
+		}
+
+		.tipLayer {
+			 position:absolute;
+			 z-index:9999;
+			 font-size: 11px;
+			 padding:2px;
+			 color: #fff;
+			 background:#ff450c;
+			 display:none;
+		}
+	</style>
+</head>
+<body>
+
+<div class="tipWrap">
+	 <a href="#" title="Monday">Monday</a>
+		  <br>
+		  <br>
+	 <div class="right">
+		  <a href="#" title="Thursday">Thursday</a>
+	 </div>
+		  <br>
+		  <br>
+	 <a href="#">Wednesday</a>
+		  <br>
+		  <br>
+	 <div class="center">
+		  <a href="#" title="Tuesday">Tuesday</a>
+	 </div>
+		  <br>
+		  <br>
+	 <a href="#" title="Friday">Friday</a>
+	 <a href="#" title="Saturday">Saturday</a>
+</div>
+
+<script type="text/javascript">
+(function(){
+	$(document).ready(function() {
+		$('.tipWrap').toolTip();
+	});
+})();
+</script>
+
+</body>
+</html>
