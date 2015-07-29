@@ -21,18 +21,8 @@
 						$('.tipLayer')
 							.css({
 								top: aOffset.top + aHeight,
-								left: aOffset.left + ((aWidth -layerWidth) / 2)
+								left: aOffset.left + ((aWidth - layerWidth) / 2)
 							});
-
-						/*.each(function(){
-							var layerWidth = $(this).width();
-
-							$(this)
-								.css({
-									top: aOffset.top + aHeight,
-									left: aOffset.left + ((aWidth -layerWidth) / 2)
-							})
-						})*/
 					},
 					mouseleave : function(){
 						$('.tipLayer').remove();
