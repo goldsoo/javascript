@@ -14,7 +14,17 @@
 
 						$('<div/>', {
 							addClass: 'tipLayer'
-						}).text(attrTitle).appendTo(document.body).each(function(){
+						}).text(attrTitle).appendTo(document.body);
+
+						var layerWidth = $('.tipLayer').width();
+
+						$('.tipLayer')
+							.css({
+								top: aOffset.top + aHeight,
+								left: aOffset.left + ((aWidth -layerWidth) / 2)
+							});
+
+						/*.each(function(){
 							var layerWidth = $(this).width();
 
 							$(this)
@@ -22,7 +32,7 @@
 									top: aOffset.top + aHeight,
 									left: aOffset.left + ((aWidth -layerWidth) / 2)
 							})
-						})
+						})*/
 					},
 					mouseleave : function(){
 						$('.tipLayer').remove();
